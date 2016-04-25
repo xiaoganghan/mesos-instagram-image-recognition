@@ -1,0 +1,20 @@
+{
+  "id": "backend",
+  "cpus": 1,
+  "mem": 800,
+  "instances": 3,
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "hanxiaogang/mesos-instagram-detect-backend",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 5000, "hostPort": 0, "servicePort": 9000, "protocol": "tcp" }
+      ]
+    }
+  },
+  "labels": {
+      "vip_PORT0": "tcp://1.2.3.4:5123"
+  }
+}

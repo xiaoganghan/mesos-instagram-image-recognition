@@ -1,0 +1,22 @@
+m1:
+  ip: 192.168.65.90
+  cpus: 2
+  memory: 2048
+  type: master
+a1:
+  ip: 192.168.65.111
+  cpus: 4
+  memory: 4096
+  type: agent-private
+p1:
+  ip: 192.168.65.60
+  cpus: 4
+  memory: 2048
+  type: agent-public
+  aliases:
+  - instagramdemo.com
+boot:
+  ip: 192.168.65.50
+  cpus: 2
+  memory: 256
+  type: boot

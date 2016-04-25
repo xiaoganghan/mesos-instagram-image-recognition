@@ -1,0 +1,21 @@
+{
+  "id": "front",
+  "cpus": 1,
+  "mem": 200,
+  "instances": 1,
+  "labels": {
+      "HAPROXY_GROUP": "external",
+      "HAPROXY_0_VHOST": "instagramdemo.com"
+  },
+  "container": {
+    "type": "DOCKER",
+    "docker": {
+      "image": "hanxiaogang/mesos-instagram-detect-frontend",
+      "forcePullImage": true,
+      "network": "BRIDGE",
+      "portMappings": [
+        { "containerPort": 5001, "hostPort": 0, "servicePort": 9001, "protocol": "tcp" }
+      ]
+    }
+  }
+}

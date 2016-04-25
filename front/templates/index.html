@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="http://v4-alpha.getbootstrap.com/favicon.ico">
+
+    <title>Instagram Demo</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="http://v4-alpha.getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="http://v4-alpha.getbootstrap.com/examples/album/album.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <div class="navbar navbar-static-top navbar-dark bg-inverse">
+      <div class="container-fluid">
+        <a href="#" class="navbar-brand">Instagram Demo</a>
+      </div>
+    </div>
+
+    <section class="jumbotron text-xs-center">
+      <div class="container">
+        <h1 class="jumbotron-heading">Instagram Demo</h1>
+        <p class="lead text-muted">Mesos/Marathon + TensorFlow + Instagram</p>
+
+        <form class="form-inline" action="/" method="POST">
+          <div class="form-group">
+            <label for="exampleInputName2">Username</label>
+            <input name="username" type="text" class="form-control" id="exampleInputName2" placeholder="nike" value={% if username %}{{username}}{% endif %}>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+      </div>
+    </section>
+
+    <div class="album text-muted">
+      <div class="container">
+      {% if images %}
+        <p>{{images|length}} images in {{'%0.2f'| format(total_seconds|float)}} seconds</p>
+        {% for image_url, object_list in images %}
+        <div class="media">
+          <a class="media-left" href="#">
+            <img width="320" class="media-object" src="{{image_url}}" alt="Generic placeholder image">
+          </a>
+          <div class="media-body">
+            {% for object in object_list %}
+            <p class="card-text">{{object}}</p>
+            {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      {% endif %}
+      </div>
+    </div>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="pull-xs-right">
+          <a href="#">Back to top</a>
+        </p>
+        <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
+        <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started guide</a>.</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/vendor/holder.min.js"></script>
+    <script>
+      $(function () {
+        Holder.addTheme("thumb", { background: "#55595c", foreground: "#eceeef", text: "Thumbnail" });
+      });
+    </script>
+    <script src="http://v4-alpha.getbootstrap.com/dist/js/bootstrap.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="http://v4-alpha.getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js"></script>
+  </body>
+</html>
