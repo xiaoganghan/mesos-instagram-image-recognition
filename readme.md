@@ -1,17 +1,22 @@
 # Demo Instagram object recognition service on DCOS/Marathon
 Given an Instagram username, return the recognized objects from the user's latest image posts. 
 
-![result](https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/result.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/result.png" width="640">
+</p>
 
 * microservice architecture based on DCOS/Marathon
 * TensorFlow + ImageNet model as deep learning backend
 
-![logos](https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/logos.png)
-
+<p align="center">
+<img src="https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/logos.png" width="320">
+</p>
 
 ## Architecture
 
-![arch](https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/arch.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/arch.png" width="480">
+</p>
 
 #### Front api service
 
@@ -24,7 +29,9 @@ Given an Instagram username, return the recognized objects from the user's lates
 
 ## Deployment
 
-![dcos](https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/dcos-running.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/xiaoganghan/mesos-instagram-image-recognition/master/pictures/dcos-running.png" width="640">
+</p>
 
 ### setup
 
