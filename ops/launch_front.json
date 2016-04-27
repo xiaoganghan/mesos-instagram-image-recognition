@@ -1,8 +1,8 @@
 {
   "id": "front",
-  "cpus": 1,
-  "mem": 200,
-  "instances": 1,
+  "cpus": 0.5,
+  "mem": 100,
+  "instances": 2,
   "labels": {
       "HAPROXY_GROUP": "external",
       "HAPROXY_0_VHOST": "instagramdemo.com"
