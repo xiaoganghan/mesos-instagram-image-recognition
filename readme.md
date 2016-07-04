@@ -50,6 +50,10 @@ cp mesos-instagram-image-recognition/ops/VagrantConfig.yaml dcos-vagrant/Vagrant
 cd dcos-vagrant
 vagrant up m1 a1 p1 boot 
 ```
+#### Install DC/OS Command Line Interface (CLI)
+
+Follow the instruction [DC/OS CLI](https://dcos.io/docs/1.7/usage/cli/install/) to install DC/OS CLI
+
 
 #### Install marathon-lb
 
