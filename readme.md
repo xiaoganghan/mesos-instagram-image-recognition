@@ -71,7 +71,7 @@ Create a [Docker Hub account](https://hub.docker.com/) to store the docker image
 assume your docker account name is 'DockerAccount'
 
 #### build docker image, test locally, and push it to dockerhub
-```
+
 cd mesos-instagram-image-recognition/backend
 
 # build a docker image called 'mesos-instagram-detect-backend'
@@ -103,12 +103,13 @@ objects: [
 
 # push to Docker Hub
 docker push DockerAccount/mesos-instagram-detect-backend:latest
-```
 
 #### deploy backend to DCOS
 cd mesos-instagram-image-recognition/ops
+
 #Using [Web UI](http://m1.dcos): create application using ops/launch_backend.json
 or,
+
 #Using DC/OS CLI: 
 dcos marathon app add launch_backend.json
 
