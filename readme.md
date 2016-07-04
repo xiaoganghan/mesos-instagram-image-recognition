@@ -81,16 +81,16 @@ docker build -t mesos-instagram-detect-backend .
 # find out the id of image 'mesos-instagram-detect-backend'
 docker images
 
-#tag the image
+# tag the image
 docker tag [image_id] DockerAccount/mesos-instagram-detect-backend:latest
 
 # run locally to test
 docker run -it -p 5000:5000 --rm  DockerAccount/mesos-instagram-detect-backend
-```
 
-open the [url](http://localhost:5000/?image_url=https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/1209679_1683062908612265_1359743351_n.jpg?ig_cache_key=MTIwODEwNzI1NDU2NjQzODE4NA%3D%3D.2) in browser to test
 
-If correct, the following results should be shown in the browser
+# copy 'http://localhost:5000/?image_url=https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/1209679_1683062908612265_1359743351_n.jpg?ig_cache_key=MTIwODEwNzI1NDU2NjQzODE4NA%3D%3D.2' to browser
+
+# If correct, the following results should be shown in the browser
 
 {
 objects: [
@@ -104,12 +104,12 @@ objects: [
 
 # push to Docker Hub
 docker push DockerAccount/mesos-instagram-detect-backend:latest
-
+```
 #### deploy backend to DCOS
 ```
 cd mesos-instagram-image-recognition/ops
 
-#Using [Web UI](http://m1.dcos): create application using ops/launch_backend.json\\
+#Using [Web UI](http://m1.dcos): create application using ops/launch_backend.json
 or,
 
 #Using DC/OS CLI: 
