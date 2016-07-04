@@ -51,7 +51,7 @@ cd dcos-vagrant
 vagrant up m1 a1 p1 boot 
 ```
 #### Install DC/OS Command Line Interface (CLI)
-Follow the instruction [DC/OS CLI](https://dcos.io/docs/1.7/usage/cli/install/) to install DC/OS CLI
+Follow the instructions [DC/OS CLI](https://dcos.io/docs/1.7/usage/cli/install/) to install DC/OS CLI
 
 #### Install marathon-lb
 
@@ -71,7 +71,7 @@ Create a [Docker Hub account](https://hub.docker.com/) to store the docker image
 assume your docker account name is 'DockerAccount'
 
 #### build docker image, test locally, and push it to dockerhub
-
+```
 cd mesos-instagram-image-recognition/backend
 
 # build a docker image called 'mesos-instagram-detect-backend'
@@ -86,10 +86,11 @@ docker tag [image_id] DockerAccount/mesos-instagram-detect-backend:latest
 
 # run locally to test
 docker run -it -p 5000:5000 --rm  DockerAccount/mesos-instagram-detect-backend
+```
 
-# open the [url](http://localhost:5000/?image_url=https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/1209679_1683062908612265_1359743351_n.jpg?ig_cache_key=MTIwODEwNzI1NDU2NjQzODE4NA%3D%3D.2) in browser to test
+open the [url](http://localhost:5000/?image_url=https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/1209679_1683062908612265_1359743351_n.jpg?ig_cache_key=MTIwODEwNzI1NDU2NjQzODE4NA%3D%3D.2) in browser to test
 
-# If correct, the following results should be shown in the browser
+If correct, the following results should be shown in the browser
 
 {
 objects: [
@@ -105,15 +106,16 @@ objects: [
 docker push DockerAccount/mesos-instagram-detect-backend:latest
 
 #### deploy backend to DCOS
+```
 cd mesos-instagram-image-recognition/ops
 
-#Using [Web UI](http://m1.dcos): create application using ops/launch_backend.json
+#Using [Web UI](http://m1.dcos): create application using ops/launch_backend.json\\
 or,
 
 #Using DC/OS CLI: 
 dcos marathon app add launch_backend.json
 
-
+```
 ### deploy front server (2 instances)
 
 #### build docker image, test locally, and push it to dockerhub
@@ -135,13 +137,13 @@ docker push DockerAccount/mesos-instagram-detect-frontend:latest
 ```
 
 #### deploy frontend to DCOS
-
+```
 cd mesos-instagram-image-recognition/ops
 Using [Web UI](http://m1.dcos): create application using ops/launch_front.json
 or,
 Using DC/OS CLI: 
 dcos marathon app add launch_front.json
-
+```
 # verify it works
 open http://instagramdemo.com in your browser
 
