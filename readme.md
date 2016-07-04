@@ -51,10 +51,7 @@ cd dcos-vagrant
 vagrant up m1 a1 p1 boot 
 ```
 #### Install DC/OS Command Line Interface (CLI)
-```
 Follow the instruction [DC/OS CLI](https://dcos.io/docs/1.7/usage/cli/install/) to install DC/OS CLI
-
-```
 
 #### Install marathon-lb
 
@@ -66,16 +63,12 @@ dcos package install --options=marathon-lb.json marathon-lb --yes
 ### Deploy Backend recognition services (3 instances)
 
 #### Install Docker
-```
 Install the Docker software by following the [Docker Installation](https://docs.docker.com/engine/installation/) 
-```
 
 #### Creat a Docker Hub account 
 
-```
 Create a [Docker Hub account](https://hub.docker.com/) to store the docker images created in the following step, 
 assume your docker account name is 'DockerAccount'
-```
 
 #### build docker image, test locally, and push it to dockerhub
 ```
