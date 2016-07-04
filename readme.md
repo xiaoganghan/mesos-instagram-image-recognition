@@ -137,7 +137,6 @@ docker push DockerAccount/mesos-instagram-detect-frontend:latest
 
 #### deploy frontend to DCOS
 
-```
 cd mesos-instagram-image-recognition/ops
 Using [Web UI](http://m1.dcos): create application using ops/launch_front.json
 or,
@@ -146,7 +145,6 @@ dcos marathon app add launch_front.json
 
 # verify it works
 open http://instagramdemo.com in your browser
-```
 
 ## references
 
