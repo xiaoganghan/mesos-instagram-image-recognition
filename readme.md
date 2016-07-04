@@ -87,7 +87,7 @@ docker tag [image_id] DockerAccount/mesos-instagram-detect-backend:latest
 # run locally to test
 docker run -it -p 5000:5000 --rm  DockerAccount/mesos-instagram-detect-backend
 
-# open the [url](http://localhost:5000/?image_url=https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/1209679_1683062908612265_1359743351_n.jpg?ig_cache_key=MTIwODEwNzI1NDU2NjQzODE4NA%3D%3D.2) in browser to test
+open the [url](http://localhost:5000/?image_url=https://igcdn-photos-b-a.akamaihd.net/hphotos-ak-xfa1/t51.2885-15/e35/1209679_1683062908612265_1359743351_n.jpg?ig_cache_key=MTIwODEwNzI1NDU2NjQzODE4NA%3D%3D.2) in browser to test
 
 # If correct, the following results should be shown in the browser
 
